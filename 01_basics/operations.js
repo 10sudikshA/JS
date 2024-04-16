@@ -4,3 +4,25 @@
 // console.log(false+true);
 // console.log(true<3>4);
 // console.log(+"");
+//COMPARISON
+// console.log("2">1);
+// console.log(2<"1");
+// console.log("">1);
+// console.log(NaN==1);
+// console.log(NaN==0);
+// console.log(NaN==NaN);
+// console.log(NaN===NaN);
+// console.log(NaN>1);
+// console.log(NaN<1);
+// console.log(+NaN);
+console.log(null==1);
+console.log(null==0);
+console.log(null>=0);
+console.log(null>0);
+console.log(null===1);
+console.log(null===0);
+console.log(null==undefined);
+console.log(null===undefined);
+console.log(typeof(null));
+console.log(typeof(undefined));
+console.log(null);
