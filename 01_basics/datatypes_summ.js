@@ -4,49 +4,71 @@
 //PRIMITIVE DATA TYPES:
 //7 types: String, number, boolean, null, undefined, symbol, BigInt
 
-const str = "abd";
-console.log(typeof(str));//string
+// const str = "abd";
+// console.log(typeof(str));//string
 
-const baseten = 100;
-const decimal = 100.01;
-console.log(typeof(decimal));//number
+// const baseten = 100;
+// const decimal = 100.01;
+// console.log(typeof(decimal));//number
 
-const N = null;
-console.log(typeof(N));//object
+// const N = null;
+// console.log(typeof(N));//object
 
-// const a; 
-const b = undefined;//undefined
-console.log(typeof(b));//undefined
+// // const a; 
+// const b = undefined;//undefined
+// console.log(typeof(b));//undefined
 
-const id = Symbol("123");
-const id2 = Symbol("123");
-console.log(id===id2);// return false because symbol always returns a unique value even when same value is passed
-console.log(typeof(id));//symbol
+// const id = Symbol("123");
+// const id2 = Symbol("123");
+// console.log(id===id2);// return false because symbol always returns a unique value even when same value is passed
+// console.log(typeof(id));//symbol
 
-const bigN = 12345678901098755976n;
-console.log(typeof bigN)//bigint
+// const bigN = 12345678901098755976n;
+// console.log(typeof bigN)//bigint
 
-const bool = true;
-console.log(typeof bool);//boolean
+// const bool = true;
+// console.log(typeof bool);//boolean
 
 
-//Non primitive datatypes:
-// Array,Objects, functions
+// //Non primitive datatypes:
+// // Array,Objects, functions
 
-const arr = ["1",2,80.90];
-console.log(typeof(arr));//object
+// const arr = ["1",2,80.90];
+// console.log(typeof(arr));//object
 
-//OBJ
-const OB1 = {
-    name:"sudi",
-    age:20
+// //OBJ
+// const OB1 = {
+//     name:"sudi",
+//     age:20
+// }
+// console.log(typeof(OB1));//object 
+
+// const func1 =  function(){
+//     console.log("HELLO WORLD");
+// }
+// func1();
+// console.log(typeof func1);//function
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++
+//stack and heap memory
+//stack(primitive datatypes...copy is send)
+
+// let myname="sudi";
+// let clonename = myname;
+// clonename="sudiksha";
+// console.log(myname);
+// console.log(clonename);
+
+//heap(non-primitive datatypes.....original reference is send)
+
+let user = {
+    name:"a",
+    pass:"10"
+
 }
-console.log(typeof(OB1));//object 
+console.log(user.pass);
+let user2 = user;
+user2.pass=20;
 
-const func1 =  function(){
-    console.log("HELLO WORLD");
-}
-func1();
-console.log(typeof func1);//function
-
-
+console.log(user.pass);
