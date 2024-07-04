@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="charcha">
+        <li>Javascript</li>
+        <li>python</li>
+        <li>Java</li>
+    </ul>
+</body>
+<script>
+    function addItem(langName){
+        const l = document.querySelector('.charcha');
+        const li = document.createElement('li');
+        li.innerText=langName;
+        l.appendChild(li);
+
+    }
+    addItem("hihi");
+    function addItemOpti(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.charcha').appendChild(li);
+    }
+    addItemOpti("REACT");
+    //EDIT 
+    const secElem = document.querySelector('li:nth-child(2)');
+    const newLi = document.createElement('li');
+    newLi.textContent = "MOJO";
+    secElem.replaceWith(newLi);
+
+    const firstLang = document.querySelector('li:first-child');
+    firstLang.outerHTML='<li>TYYY</li>';
+
+    //REMOVING
+    const lastLang= document.querySelector('li:last-child');
+    lastLang.remove();
+
+</script>
+</html>
